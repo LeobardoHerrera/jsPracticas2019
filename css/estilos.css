@@ -1,0 +1,287 @@
+/*-------------Inicio Selecciona color-------------*/
+:root {
+	--colorPrimario  : #2f3640;
+	--colorSecundario: #4cd137;
+	--colorTerciario : #fff;
+}
+
+/*-------------Fin Selecciona color-------------*/
+
+
+/*-------------Inicio General-------------*/
+*{
+	margin : 0px;
+	padding: 0px;
+}
+
+html, body {
+height    : 97%;
+background: var(--colorTerciario);
+}
+
+.sombra{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+textarea:focus, input:focus, input[type]:focus {
+    border-color: var(--colorSecundario);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px var(--colorSecundario);
+    outline: 0 none;
+}
+
+.salto {
+	margin-bottom: 30px;
+}
+/*-------------Fin General-------------*/
+
+
+/*-------------Inicio Encabezado-------------*/
+section.iconos ul li a{
+	font-size    : 26px;
+	margin       : 4px;
+	padding      : 4px;
+	border-radius: 5px;
+	margin-top   : 2px;
+	color        : var(--colorPrimario);
+}
+.desabilita{
+	color:#ccc;
+}
+
+.contenedor{
+	padding      : 0px;
+	margin       : 0px;
+	border       : 10px solid var(--colorTerciario);
+	border-top   : 5px solid var(--colorSecundario);
+	border-right : 0px solid var(--colorTerciario);   
+	border-bottom: 0px solid var(--colorSecundario);
+	border-left  : 0px solid var(--colorTerciario);
+	height       : 40px;
+}
+
+a.color{
+	border            : solid 2px var(--colorPrimario);
+	-webkit-transition: all .5s ease;
+	-moz-transition   : all .5s ease;
+	-o-transition     : all .5s ease;
+	background        : var(--colorTerciario);
+}
+
+p.user {
+	font-size    : 16px;
+	padding      : 2px;
+	margin-top   : 4px;
+	margin-left  : 4px;
+	margin-right : 4px;
+	color        : var(--colorTerciario);
+	border-radius: 4px;
+	font-weight  : bolder;
+	display      : block;
+}
+
+
+@media screen and (max-width: 470px) {
+  p.user {
+    display: none;
+  }
+}
+
+/*-------------Fin Encabezado-------------*/
+
+
+/*-------------Inicio Cambio de color-------------*/
+a.color:hover{
+	color     : var(--colorTerciario);
+	background: var(--colorPrimario);
+	border    : solid 2px var(--colorSecundario);	
+}
+
+.fondo{
+	background: var(--colorPrimario);
+}
+
+.borde{
+	border: 2px solid var(--colorPrimario);
+}
+
+.colorLetra{
+	color: var(--colorPrimario);
+}
+/*---------------Fin Cambio de color---------------*/
+
+
+/*---------------Inicio sidebar---------------*/
+.sidebar{
+	margin-top   : 14px;
+	width        : 100%;
+	height       : 100%;
+	border-radius: 0px;
+}
+.sidebar li {
+	list-style: none;
+	background: var(--colorTerciario);
+}
+
+.sidebar a:hover{
+	background : var(--colorPrimario);
+	color      : var(--colorTerciario);
+	border-left: 8px solid var(--colorSecundario);
+}
+.sidebar h2{
+	font-size    : 16px;
+	text-align   : center;
+	margin       : 0px;
+	padding      : 10px;
+	color        : var(--colorTerciario);
+	border-bottom: solid 5px var(--colorTerciario);
+}
+
+.sidebar ul{
+	list-style: none;
+	padding   : 0px;
+	margin    : 0px;
+}
+.sidebar a {
+	-webkit-transition: all .5s ease;
+	-moz-transition   : all .5s ease;
+	-o-transition     : all .5s ease;
+	text-decoration   : none;
+	display           : block;
+	padding           : 10px;
+	font-size         : 15px;
+	font-weight       : bold;
+	color             : var(--colorPrimario);
+}
+
+.container-fluid{
+	height: 95%;
+}
+
+li .activo{
+	border-left: 8px solid var(--colorSecundario);
+	background : var(--colorPrimario);
+	color      : var(--colorTerciario);
+}
+
+h3{
+	margin     : 0px;
+	font-size  : 20px;
+	font-weight: bold; 
+	color      : var(--colorPrimario);
+}
+
+@media screen and (max-width: 774px) {
+	.sidebar li a{
+		padding  : 2px;
+		font-size: 13px;
+	}
+	
+	.sidebar  h2.fondo{
+		padding  : 2px;
+		font-size: 13px;
+	}
+
+	div.titulo{
+		margin-top: 12px;
+	}
+
+	div.titulo h3,div.contenido p{
+		font-size: 13px;
+	}
+
+	div.contenido{
+		margin-top: 0px;
+	}
+
+	footer.fondo .copyright ,footer.fondo .information{
+		font-size: 10px;
+	}
+
+	.borde{
+		border: 2px solid var(--colorPrimario);
+	}
+}
+/*---------------Fin sidebar---------------*/
+
+
+/*---------------Inicio cuerpo---------------*/
+.contenido,.titulo{
+	margin-bottom: 10px;
+	height       : 100%;
+	display      : inline-block;
+	min-width    : 100%;
+	padding      : 10px;
+	min-height   : 400px;
+	border-radius: 0px;
+}
+
+.titulo{
+	min-height   : 0px;
+}
+
+/*---------------Fin cuerpo---------------*/
+
+
+/*---------------Inicio footer---------------*/
+footer{
+	max-width      : 100%;
+	margin         : auto;
+	display        : flex;
+	justify-content: space-between;
+	padding-left   : 40px;
+	padding-right  : 40px;
+	height         : 60px;
+	color          :var(--colorTerciario);
+	padding-top    : 10px;
+	border-top     : 0px solid var(--colorSecundario);
+	border-right   : 0px solid var(--colorTerciario);   
+	border-bottom  : 5px solid var(--colorSecundario);
+	border-left    : 0px solid var(--colorTerciario);
+	position       : relative;
+	margin-top     : -50px; 
+	height         : 50px; 
+}
+
+.copyright a, .information a{
+	text-decoration: none;
+	font-weight    : bold;
+	color          : var(--colorTerciario);
+}
+
+/*---------------Fin footer---------------*/
+
+
+/*---------------Inicio login---------------*/
+body.login{
+	background: 	var(--colorTerciario);
+}
+
+.login-box{
+	background: var(--colorTerciario);
+	padding   : 10px;
+	width     : 500px;
+	margin    : 7% auto;	
+}
+
+.btn-login{
+	border-radius     : 0;
+	background        : var(--colorPrimario);
+	color             :#fff;
+	-webkit-transition:all 0.8s;
+	transition        : all 0.8s;
+}
+
+.btn-login:hover{
+	background: transparent;
+	border    :1px solid var(--colorPrimario);
+	color     :var(--colorPrimario);
+}
+
+@media (max-width: 768px) {
+  .login-box{
+	width     : 90%;
+	margin-top: 80px; 
+  }
+}
+
+/*---------------Fin login---------------*/
