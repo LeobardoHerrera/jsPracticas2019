@@ -1,0 +1,43 @@
+$("#formGuardar").submit(function(e){
+  
+    var nombre    = $("#nombrex").val();
+    var telefono  = $("#telefonox").val();
+    var estado    = $("#estadox").val();
+    var municipio = $("#municipiox").val();
+    var colonia   = $("#coloniax").val();
+    var calle     = $("#callex").val();
+    var numero    = $("#numerox").val();
+    var giro      = $("#girox").val();
+    var sector    = $("#sectorx").val();
+    var web       = $("#webx").val();
+
+        $.ajax({
+            url:"guardar.php",
+            type:"POST",
+            dateType:"html",
+            data:{
+                    'nombre':nombre,
+                    'telefono':telefono,
+                    'estado':estado,
+                    'municipio':municipio,
+                    'colonia':colonia,
+                    'calle':calle,
+                    'numero':numero,
+                    'giro':giro,
+                    'sector':sector,
+                    'web':web
+                 },
+            success:function(respuesta){
+              
+            $("#registro_alta").hide();
+            alertify.set('notifier','position', 'bottom-right');
+            alertify.success('Se ha guardado el registro' );
+            llenarLista();
+            },
+            error:function(xhr,status){
+                alert(xhr);
+            },
+        });
+        e.preventDefault();
+        return false;
+});
